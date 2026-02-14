@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aztecador | Pronósticos Premium</title>
 
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Logo fixiert oben -->
+    <header class="header">
+        <img src="assets/logo.png" alt="Aztecador Logo" class="logo">
+    </header>
+
+    <!-- Hero Bereich -->
+    <section class="section reveal">
+        <h1>Pronósticos Deportivos Premium</h1>
+        <p>
+            En Aztecador ofrecemos análisis profesionales basados en datos,
+            estadísticas avanzadas y gestión inteligente del riesgo.
+            Nuestro sistema ha demostrado una efectividad promedio del 85%.
+        </p>
+        <p class="price">
+            Membresía mensual: <strong>$500 MXN</strong>
+        </p>
+    </section>
+
+    <!-- Login Bereich -->
+    <section class="section reveal login-section">
+        <h2>Acceso Miembros</h2>
+        <input type="email" placeholder="Correo electrónico">
+        <input type="password" placeholder="Contraseña">
+        <button>Iniciar Sesión</button>
+        <p class="small">
+            ¿No tienes cuenta? Regístrate y comienza hoy.
+        </p>
+    </section>
+
+    <!-- Seguridad / Legal -->
+    <section class="section reveal">
+        <h2>Seguridad y Transparencia</h2>
+        <p>
+            Aztecador opera bajo principios legales y contractuales claros.
+            No promovemos el juego irresponsable.
+            Nuestros servicios se limitan exclusivamente a análisis deportivos.
+            Cada miembro acepta nuestros términos y condiciones antes de acceder.
+        </p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section reveal faq">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-item">
+            <h3>¿Cuántos pronósticos recibo al día?</h3>
+            <p>Publicamos entre 2 y 4 pronósticos diarios cuidadosamente analizados.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Está garantizada la ganancia?</h3>
+            <p>No garantizamos ganancias. Aplicamos gestión profesional del riesgo y estadísticas avanzadas.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>¿Qué deportes cubren?</h3>
+            <p>Principalmente fútbol internacional, pero también otras ligas seleccionadas.</p>
+        </div>
+
+    </section>
+
+<script>
+    // Scroll Animation
+    function reveal() {
+        const reveals = document.querySelectorAll(".reveal");
+
+        for (let i = 0; i < reveals.length; i++) {
+            const windowHeight = window.innerHeight;
+            const elementTop = reveals[i].getBoundingClientRect().top;
+            const elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
+
+</body>
+</html>
