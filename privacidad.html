@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astecador – Política de Privacidad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <img src="assets/logo.png" alt="Astecador Logo" class="logo">
+      </div>
+      <nav class="right-side">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="#" class="nav-link">Analysis</a>
+        <a href="#" class="nav-link">Membresía</a>
+        <a href="#" class="nav-link login-btn">Login</a>
+        <a href="#" class="nav-link register-btn">Registro</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="hero">
+      <div class="hero-content active">
+        <h1>Política de Privacidad</h1>
+        <p>En Astecador valoramos tu privacidad. Esta página describe cómo recopilamos, usamos y protegemos tus datos.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-box active">
+        <h3>Datos Recopilados</h3>
+        <p>Recopilamos únicamente los datos necesarios para ofrecer nuestros servicios, como nombre, correo electrónico, número de teléfono y datos de pago mediante MercadoPago.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Uso de la Información</h3>
+        <p>La información proporcionada se utiliza exclusivamente para procesar pagos, habilitar el acceso a la membresía y enviar comunicaciones relacionadas con el servicio.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Protección de Datos</h3>
+        <p>Implementamos medidas de seguridad técnicas y administrativas para proteger tus datos contra accesos no autorizados, alteraciones o divulgación.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Derechos del Usuario</h3>
+        <p>Los usuarios pueden solicitar acceso, rectificación o eliminación de sus datos personales enviando un correo electrónico a nuestro equipo de soporte.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Modificaciones</h3>
+        <p>Astecador se reserva el derecho de modificar esta política de privacidad. Cualquier cambio será publicado en esta página y entrará en vigencia de inmediato.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="aviso.html">Aviso Legal</a>
+      <a href="privacidad.html">Política de Privacidad</a>
+      <a href="terminos.html">Términos y Condiciones</a>
+      <a href="responsabilidad.html">Responsabilidad</a>
+    </div>
+    <p>&copy; 2026 Astecador. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const reveals = document.querySelectorAll('.feature-box, .hero-content');
+
+    function reveal() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
+
+</body>
+</html>
