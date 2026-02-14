@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nombre de tu Servicio</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -16,217 +15,232 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     color: white;
-    background: url('TU-FONDO.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('DEIN-BESTEHENDER-HINTERGRUND.jpg') center center / cover no-repeat fixed;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.75);
+.container {
+    background: rgba(0,0,0,0.65);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-/* NAVIGATION */
-nav {
+/* NAVBAR */
+header {
+    padding: 20px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
 }
 
-nav img {
-    height: 60px;
+header img {
+    height: 60px; /* dein originales Logo */
 }
 
-nav ul {
+nav {
     display: flex;
-    list-style: none;
     gap: 30px;
 }
 
 nav a {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     font-weight: 500;
+    font-size: 15px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #00c3ff;
+    opacity: 0.7;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 120px 20px 80px 20px;
+    padding: 100px 20px 60px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 .hero p {
-    margin-top: 20px;
-    font-size: 18px;
-    opacity: 0.8;
+    margin-top: 15px;
+    font-size: 17px;
+    opacity: 0.85;
 }
 
-.btn-primary {
+.button {
     margin-top: 30px;
     display: inline-block;
-    padding: 14px 35px;
-    background: #00c3ff;
-    color: black;
-    font-weight: 600;
+    padding: 14px 30px;
+    border: 1px solid white;
     border-radius: 8px;
     text-decoration: none;
+    color: white;
     transition: 0.3s;
 }
 
-.btn-primary:hover {
-    background: #0099cc;
+.button:hover {
+    background: white;
+    color: black;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section {
-    padding: 80px 10%;
+    padding: 70px 8%;
     text-align: center;
 }
 
 .section h2 {
-    font-size: 36px;
     margin-bottom: 40px;
+    font-size: 30px;
 }
 
-/* FEATURES */
-.features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
-.feature-box {
-    width: 300px;
-    padding: 25px;
-    background: rgba(255,255,255,0.05);
+.card {
+    padding: 30px;
+    background: rgba(255,255,255,0.08);
     border-radius: 12px;
 }
 
 /* PRICING */
-.pricing-box {
+.pricing {
     max-width: 400px;
     margin: auto;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.1);
     padding: 40px;
     border-radius: 15px;
 }
 
 .price {
-    font-size: 42px;
-    font-weight: 700;
+    font-size: 38px;
     margin: 20px 0;
 }
 
 /* FOOTER */
 footer {
-    background: rgba(0,0,0,0.9);
-    padding: 40px 10%;
+    margin-top: auto;
+    background: rgba(0,0,0,0.85);
+    padding: 30px 5%;
     text-align: center;
-    font-size: 14px;
 }
 
 .footer-links {
-    margin-top: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-links a {
-    margin: 0 15px;
     color: white;
     text-decoration: none;
+    font-size: 14px;
     opacity: 0.8;
 }
 
 .footer-links a:hover {
     opacity: 1;
-    color: #00c3ff;
 }
 
+/* MOBILE FIXES */
 @media (max-width: 768px) {
-    .features {
+
+    header {
         flex-direction: column;
-        align-items: center;
+        gap: 15px;
     }
-    nav ul {
-        display: none;
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 80px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .pricing {
+        padding: 30px;
     }
 }
 </style>
 </head>
 
 <body>
-<div class="overlay">
 
-<!-- NAVIGATION -->
-<nav>
-    <img src="TU-LOGO.png" alt="Logo">
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#precios">Precios</a></li>
-        <li><a href="#checkout">Comenzar</a></li>
-    </ul>
-</nav>
+<div class="container">
 
-<!-- HERO -->
+<header>
+    <img src="DEIN-LOGO.png" alt="Logo">
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#checkout">Comenzar</a>
+    </nav>
+</header>
+
 <section id="inicio" class="hero">
-    <h1>Solución Profesional Digital</h1>
-    <p>Servicio moderno, seguro y eficiente para tu negocio.</p>
-    <a href="#precios" class="btn-primary">Empezar Ahora</a>
+    <h1>Servicio Digital Profesional</h1>
+    <p>Solución moderna y segura para tu negocio.</p>
+    <a href="#precios" class="button">Ver Plan</a>
 </section>
 
-<!-- SERVICIOS -->
 <section id="servicios" class="section">
-    <h2>¿Qué Ofrecemos?</h2>
-    <div class="features">
-        <div class="feature-box">
-            <h3>Rápido</h3>
-            <p>Activación inmediata y acceso automático.</p>
+    <h2>Nuestros Beneficios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Acceso Inmediato</h3>
+            <p>Activación rápida después del pago.</p>
         </div>
-        <div class="feature-box">
-            <h3>Seguro</h3>
-            <p>Pagos protegidos y sistema confiable.</p>
+        <div class="card">
+            <h3>Pagos Seguros</h3>
+            <p>Procesado mediante Mercado Pago.</p>
         </div>
-        <div class="feature-box">
-            <h3>Profesional</h3>
-            <p>Diseñado para clientes exigentes.</p>
+        <div class="card">
+            <h3>Soporte Directo</h3>
+            <p>Atención personalizada cuando lo necesites.</p>
         </div>
     </div>
 </section>
 
-<!-- PRECIOS -->
 <section id="precios" class="section">
     <h2>Plan Mensual</h2>
-    <div class="pricing-box">
+    <div class="pricing">
         <h3>Plan Premium</h3>
         <div class="price">$500 MXN</div>
-        <p>Acceso completo al servicio.</p>
-        <a href="#checkout" class="btn-primary">Suscribirme</a>
+        <p>Suscripción mensual cancelable en cualquier momento.</p>
+        <a href="#checkout" class="button">Suscribirme</a>
     </div>
 </section>
 
-<!-- CHECKOUT CTA -->
 <section id="checkout" class="section">
-    <h2>Empieza Hoy</h2>
-    <p>Suscripción mensual cancelable en cualquier momento.</p>
-    <a href="LINK-MERCADOPAGO" class="btn-primary">
+    <h2>Comienza Ahora</h2>
+    <a href="LINK-MERCADOPAGO" class="button">
         Pagar con Mercado Pago
     </a>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <p>© 2026 Nombre Comercial | RFC: XXXXXXXX</p>
 
@@ -236,10 +250,6 @@ footer {
         <a href="cancelacion.html">Política de Cancelación</a>
         <a href="contacto.html">Contacto</a>
     </div>
-
-    <p style="margin-top:20px; opacity:0.6;">
-        Todos los derechos reservados.
-    </p>
 </footer>
 
 </div>
