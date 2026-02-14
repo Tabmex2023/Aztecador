@@ -4,67 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aztecador | Pronósticos Premium</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header class="header">
-    <div class="header-inner">
-        <img src="assets/logo.png" alt="Aztecador Logo" class="logo">
-        <a href="#" class="login-btn">Iniciar Sesión</a>
+<!-- LOGO BANNER -->
+<div class="logo-banner">
+    <img src="assets/logo.png" alt="Aztecador Logo">
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="#">Inicio</a>
+        <a href="#">FAQ</a>
+        <a href="#">Resultados</a>
+        <a href="#">Contacto</a>
     </div>
-</header>
+    <div class="nav-right">
+        <a href="#" class="login-btn">Login</a>
+    </div>
+</nav>
 
-
+<!-- CONTENT -->
 <main>
 
-    <section class="hero reveal">
-        <h1>Pronósticos Deportivos con 85% de Precisión</h1>
+    <!-- Beschreibung Baukasten -->
+    <section class="box reveal">
+        <h1>Pronósticos Deportivos Premium</h1>
         <p>
-            Análisis profesional basado en estadísticas avanzadas,
-            lectura de mercado y gestión estratégica del capital.
-        </p>
-        <p class="price">
-            Membresía mensual: <strong>$500 MXN</strong>
+            Sistema basado en análisis estadístico avanzado, lectura del mercado
+            y evaluación de valor real en cada evento deportivo.
         </p>
     </section>
 
+    <section class="box reveal">
+        <h2>85% de Precisión Histórica</h2>
+        <p>
+            Nuestro modelo combina datos, contexto y gestión estratégica.
+            No realizamos apuestas masivas, seleccionamos oportunidades reales.
+        </p>
+    </section>
 
-    <section class="advantages">
+    <section class="box reveal">
+        <h2>Gestión Profesional del Capital</h2>
+        <p>
+            Aplicamos un sistema de money management diseñado para proteger
+            el bankroll y maximizar rendimiento a largo plazo.
+        </p>
+    </section>
 
-        <div class="adv-box reveal">
-            <h3>Alta Efectividad</h3>
-            <p>Modelo estadístico con promedio histórico del 85%.</p>
-        </div>
+    <section class="box reveal">
+        <h2>Membresía</h2>
+        <p>
+            Acceso completo por $500 MXN mensuales.
+            Incluye 2-4 pronósticos diarios y seguimiento constante.
+        </p>
+    </section>
 
-        <div class="adv-box reveal">
-            <h3>Money Management</h3>
-            <p>Protección de capital mediante gestión profesional del riesgo.</p>
-        </div>
-
-        <div class="adv-box reveal">
-            <h3>2-4 Picks Diarios</h3>
-            <p>Selección filtrada, sin apuestas impulsivas.</p>
-        </div>
-
-        <div class="adv-box reveal">
-            <h3>Análisis Real</h3>
-            <p>Estudio profundo de datos, forma, contexto y valor.</p>
-        </div>
-
-        <div class="adv-box reveal">
-            <h3>Transparencia</h3>
-            <p>Resultados documentados y seguimiento claro.</p>
-        </div>
-
-        <div class="adv-box reveal">
-            <h3>Marco Legal</h3>
-            <p>Servicio informativo bajo términos y condiciones.
-            No promovemos juego irresponsable.</p>
-        </div>
-
+    <section class="box reveal">
+        <h2>Marco Legal</h2>
+        <p>
+            Aztecador opera como servicio informativo y de análisis deportivo.
+            No promovemos el juego irresponsable.
+            Todos los miembros aceptan términos y condiciones antes del acceso.
+        </p>
     </section>
 
 </main>
@@ -77,6 +82,7 @@ function reveal() {
     reveals.forEach(el => {
         const windowHeight = window.innerHeight;
         const elementTop = el.getBoundingClientRect().top;
+
         if (elementTop < windowHeight - 100) {
             el.classList.add("active");
         }
