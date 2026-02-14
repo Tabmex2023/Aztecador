@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astecador – Responsabilidad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="header">
+    <div class="nav-wrapper">
+      <div class="left-side">
+        <img src="assets/logo.png" alt="Astecador Logo" class="logo">
+      </div>
+      <nav class="right-side">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="#" class="nav-link">Analysis</a>
+        <a href="#" class="nav-link">Membresía</a>
+        <a href="#" class="nav-link login-btn">Login</a>
+        <a href="#" class="nav-link register-btn">Registro</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="hero">
+      <div class="hero-content active">
+        <h1>Responsabilidad</h1>
+        <p>Astecador proporciona pronósticos y análisis con fines informativos. Es importante entender las responsabilidades asociadas al uso de nuestros servicios.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-box active">
+        <h3>Uso Responsable</h3>
+        <p>Los usuarios deben utilizar la información proporcionada por Astecador de manera responsable y consciente. Los resultados de las apuestas dependen del juicio propio y del manejo de riesgos.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Sin Garantía de Resultados</h3>
+        <p>Astecador no garantiza la obtención de beneficios. Las predicciones se basan en análisis estadísticos y en IA, con una probabilidad histórica de acierto del 85%.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Decisiones del Usuario</h3>
+        <p>Cada usuario es responsable de sus decisiones y de cómo aplica la información recibida. Astecador no asume responsabilidad por pérdidas derivadas del uso de sus análisis.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Protección Legal</h3>
+        <p>Todos los servicios están diseñados para cumplir con la legislación vigente en México. Los usuarios aceptan los términos de responsabilidad al utilizar nuestros servicios.</p>
+      </div>
+
+      <div class="feature-box active">
+        <h3>Actualizaciones</h3>
+        <p>Astecador puede actualizar estas condiciones de responsabilidad en cualquier momento. Las modificaciones se publicarán en esta página y entrarán en vigor de inmediato.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="aviso.html">Aviso Legal</a>
+      <a href="privacidad.html">Política de Privacidad</a>
+      <a href="terminos.html">Términos y Condiciones</a>
+      <a href="responsabilidad.html">Responsabilidad</a>
+    </div>
+    <p>&copy; 2026 Astecador. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const reveals = document.querySelectorAll('.feature-box, .hero-content');
+
+    function reveal() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
+
+</body>
+</html>
