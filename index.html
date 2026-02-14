@@ -6,91 +6,85 @@
     <title>Aztecador | Pronósticos Premium</title>
 
     <link rel="stylesheet" href="styles.css">
-
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
 
-    <!-- Logo fixiert oben -->
-    <header class="header">
-        <img src="assets/logo.png" alt="Aztecador Logo" class="logo">
-    </header>
+<header class="header">
+    <img src="assets/logo.png" alt="Aztecador Logo" class="logo">
 
-    <!-- Hero Bereich -->
-    <section class="section reveal">
-        <h1>Pronósticos Deportivos Premium</h1>
-        <p>
-            En Aztecador ofrecemos análisis profesionales basados en datos,
-            estadísticas avanzadas y gestión inteligente del riesgo.
-            Nuestro sistema ha demostrado una efectividad promedio del 85%.
-        </p>
-        <p class="price">
-            Membresía mensual: <strong>$500 MXN</strong>
-        </p>
-    </section>
+    <a href="#" class="login-btn">Iniciar Sesión</a>
+</header>
 
-    <!-- Login Bereich -->
-    <section class="section reveal login-section">
-        <h2>Acceso Miembros</h2>
-        <input type="email" placeholder="Correo electrónico">
-        <input type="password" placeholder="Contraseña">
-        <button>Iniciar Sesión</button>
-        <p class="small">
-            ¿No tienes cuenta? Regístrate y comienza hoy.
-        </p>
-    </section>
 
-    <!-- Seguridad / Legal -->
-    <section class="section reveal">
-        <h2>Seguridad y Transparencia</h2>
-        <p>
-            Aztecador opera bajo principios legales y contractuales claros.
-            No promovemos el juego irresponsable.
-            Nuestros servicios se limitan exclusivamente a análisis deportivos.
-            Cada miembro acepta nuestros términos y condiciones antes de acceder.
-        </p>
-    </section>
+<!-- Hero Section -->
+<section class="hero reveal">
+    <h1>Pronósticos Deportivos con 85% de Precisión</h1>
+    <p>
+        Análisis profesional basado en estadísticas avanzadas,
+        lectura de mercado y gestión estratégica del capital.
+    </p>
+    <p class="price">
+        Membresía mensual: <strong>$500 MXN</strong>
+    </p>
+</section>
 
-    <!-- FAQ -->
-    <section class="section reveal faq">
-        <h2>Preguntas Frecuentes</h2>
 
-        <div class="faq-item">
-            <h3>¿Cuántos pronósticos recibo al día?</h3>
-            <p>Publicamos entre 2 y 4 pronósticos diarios cuidadosamente analizados.</p>
-        </div>
+<!-- Ventajas -->
+<section class="advantages">
 
-        <div class="faq-item">
-            <h3>¿Está garantizada la ganancia?</h3>
-            <p>No garantizamos ganancias. Aplicamos gestión profesional del riesgo y estadísticas avanzadas.</p>
-        </div>
+    <div class="adv-box reveal">
+        <h3>Alta Efectividad</h3>
+        <p>Sistema con promedio histórico del 85% en selecciones analizadas.</p>
+    </div>
 
-        <div class="faq-item">
-            <h3>¿Qué deportes cubren?</h3>
-            <p>Principalmente fútbol internacional, pero también otras ligas seleccionadas.</p>
-        </div>
+    <div class="adv-box reveal">
+        <h3>Gestión Profesional</h3>
+        <p>Aplicamos money management para reducir riesgo y proteger capital.</p>
+    </div>
 
-    </section>
+    <div class="adv-box reveal">
+        <h3>2-4 Picks Diarios</h3>
+        <p>Selecciones cuidadosamente filtradas, no apuestas masivas.</p>
+    </div>
+
+    <div class="adv-box reveal">
+        <h3>Análisis Real</h3>
+        <p>No seguimos tendencias, analizamos datos, contexto y valor real.</p>
+    </div>
+
+    <div class="adv-box reveal">
+        <h3>Transparencia Total</h3>
+        <p>Historial claro y resultados documentados.</p>
+    </div>
+
+    <div class="adv-box reveal">
+        <h3>Marco Legal</h3>
+        <p>Servicio informativo bajo términos y condiciones claros.
+        No promovemos juego irresponsable.</p>
+    </div>
+
+</section>
+
 
 <script>
-    // Scroll Animation
-    function reveal() {
-        const reveals = document.querySelectorAll(".reveal");
+function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
 
-        for (let i = 0; i < reveals.length; i++) {
-            const windowHeight = window.innerHeight;
-            const elementTop = reveals[i].getBoundingClientRect().top;
-            const elementVisible = 100;
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
 
-            if (elementTop < windowHeight - elementVisible) {
-                reveals[i].classList.add("active");
-            }
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
         }
     }
+}
 
-    window.addEventListener("scroll", reveal);
-    reveal();
+window.addEventListener("scroll", reveal);
+reveal();
 </script>
 
 </body>
