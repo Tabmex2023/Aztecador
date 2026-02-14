@@ -3,126 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Astecador | Análisis Deportivo Profesional</title>
-
+<title>Astecador | Análisis Deportivo Premium</title>
 <link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
-    <div class="nav-container">
-
-        <div class="logo-area">
-            <img src="assets/logo.png" alt="Astecador Logo">
-        </div>
-
-        <nav class="menu">
-            <a href="#">Inicio</a>
-            <a href="#">Análisis</a>
-            <a href="#">Resultados</a>
-            <a href="#">Membresías</a>
-            <a href="#">Contacto</a>
-        </nav>
-
-        <div class="auth-buttons">
-            <a href="#" class="login">Login</a>
-            <a href="#" class="register">Registro</a>
-        </div>
-
+  <div class="nav-wrapper">
+    <div class="left-side">
+      <img src="assets/logo.png" alt="Astecador Logo" class="logo">
     </div>
+    <div class="right-side">
+      <a href="#">Analysis</a>
+      <a href="#">Membresía</a>
+      <a href="#" class="login">Login</a>
+      <a href="#" class="register">Registro</a>
+    </div>
+  </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-content">
-        <h1>Análisis Deportivo Basado en Datos</h1>
-        <p>Disciplina, estrategia y gestión estructurada.</p>
-        <a href="#" class="btn-primary">Acceso Premium</a>
-    </div>
+  <div class="hero-content">
+    <h1>Análisis Deportivo Premium</h1>
+    <p>Recibe diariamente 2 a 4 pronósticos en diferentes deportes: fútbol, baloncesto, tenis y más.</p>
+    <p>Nuestra tasa de acierto ha sido del 85 % durante los últimos 2 años.</p>
+    <p>Con una membresía mensual, la mayoría de los usuarios recupera su inversión en tan solo una semana con la gestión correcta.</p>
+  </div>
 </section>
 
-<!-- FILTRO -->
-<section class="filter-section reveal">
-    <h2>Filtrar Análisis</h2>
-
-    <div class="filter-grid">
-        <select>
-            <option>Liga</option>
-            <option>La Liga</option>
-            <option>Premier League</option>
-            <option>Bundesliga</option>
-        </select>
-
-        <select>
-            <option>Mercado</option>
-            <option>Over/Under</option>
-            <option>BTTS</option>
-            <option>Handicap</option>
-        </select>
-
-        <select>
-            <option>Riesgo</option>
-            <option>Bajo</option>
-            <option>Medio</option>
-            <option>Alto</option>
-        </select>
-
-        <button class="btn-secondary">Aplicar</button>
-    </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features">
-
-    <div class="feature-box reveal">
-        <h3>Modelos Estadísticos</h3>
-        <p>Análisis profundo con datos históricos y métricas avanzadas.</p>
-    </div>
-
-    <div class="feature-box reveal">
-        <h3>Gestión de Riesgo</h3>
-        <p>Enfoque disciplinado orientado al largo plazo.</p>
-    </div>
-
-    <div class="feature-box reveal">
-        <h3>Transparencia</h3>
-        <p>Resultados documentados y seguimiento estructurado.</p>
-    </div>
-
+<!-- FEATURES / BAUKÄSTEN -->
+<section class="features reveal">
+  <div class="feature-box">
+    <h3>Análisis con IA</h3>
+    <p>Todos nuestros pronósticos se generan con inteligencia artificial avanzada y modelos estadísticos precisos.</p>
+  </div>
+  <div class="feature-box">
+    <h3>85 % Tasa de Acierto</h3>
+    <p>Durante los últimos dos años, nuestros pronósticos han alcanzado una precisión promedio del 85 %.</p>
+  </div>
+  <div class="feature-box">
+    <h3>Recupera tu inversión rápido</h3>
+    <p>En la mayoría de los casos, los usuarios recuperan el monto de la membresía en tan solo una semana.</p>
+  </div>
+  <div class="feature-box">
+    <h3>Compatible con todos los dispositivos</h3>
+    <p>La plataforma funciona en móvil, tablet y PC; también puedes agregarla al inicio como una app.</p>
+  </div>
+  <div class="feature-box">
+    <h3>Soporte y transparencia</h3>
+    <p>Documentamos cada pronóstico y ofrecemos soporte completo para resolver tus dudas.</p>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-    <div class="footer-links">
-        <a href="#">Aviso Legal</a>
-        <a href="#">Política de Privacidad</a>
-        <a href="#">Términos y Condiciones</a>
-        <a href="#">Responsabilidad</a>
-    </div>
-
-    <p class="disclaimer">
-        Este servicio ofrece análisis deportivo informativo. No se garantizan resultados.
-    </p>
-
-    <p>© 2026 Astecador</p>
+  <div class="footer-links">
+    <a href="#">Aviso Legal</a>
+    <a href="#">Política de Privacidad</a>
+    <a href="#">Términos y Condiciones</a>
+    <a href="#">Responsabilidad</a>
+  </div>
+  <p class="disclaimer">
+    Este servicio ofrece únicamente análisis informativo y no acepta apuestas directamente. El usuario es responsable de sus decisiones financieras.
+  </p>
+  <p>© 2026 Astecador</p>
 </footer>
 
+<!-- SCROLL ANIMATION -->
 <script>
-/* Scroll Reveal */
-const reveals = document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll(".reveal, .feature-box");
 
 window.addEventListener("scroll", () => {
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-
-        if(elementTop < windowHeight - 100){
-            el.classList.add("active");
-        }
-    });
+  reveals.forEach(el => {
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add("active");
+    }
+  });
 });
 </script>
 
