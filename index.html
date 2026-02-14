@@ -6,81 +6,81 @@
     <title>Aztecador | Pronósticos Premium</title>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
 
 <header class="header">
-    <img src="assets/logo.png" alt="Aztecador Logo" class="logo">
-
-    <a href="#" class="login-btn">Iniciar Sesión</a>
+    <div class="header-inner">
+        <img src="assets/logo.png" alt="Aztecador Logo" class="logo">
+        <a href="#" class="login-btn">Iniciar Sesión</a>
+    </div>
 </header>
 
 
-<!-- Hero Section -->
-<section class="hero reveal">
-    <h1>Pronósticos Deportivos con 85% de Precisión</h1>
-    <p>
-        Análisis profesional basado en estadísticas avanzadas,
-        lectura de mercado y gestión estratégica del capital.
-    </p>
-    <p class="price">
-        Membresía mensual: <strong>$500 MXN</strong>
-    </p>
-</section>
+<main>
+
+    <section class="hero reveal">
+        <h1>Pronósticos Deportivos con 85% de Precisión</h1>
+        <p>
+            Análisis profesional basado en estadísticas avanzadas,
+            lectura de mercado y gestión estratégica del capital.
+        </p>
+        <p class="price">
+            Membresía mensual: <strong>$500 MXN</strong>
+        </p>
+    </section>
 
 
-<!-- Ventajas -->
-<section class="advantages">
+    <section class="advantages">
 
-    <div class="adv-box reveal">
-        <h3>Alta Efectividad</h3>
-        <p>Sistema con promedio histórico del 85% en selecciones analizadas.</p>
-    </div>
+        <div class="adv-box reveal">
+            <h3>Alta Efectividad</h3>
+            <p>Modelo estadístico con promedio histórico del 85%.</p>
+        </div>
 
-    <div class="adv-box reveal">
-        <h3>Gestión Profesional</h3>
-        <p>Aplicamos money management para reducir riesgo y proteger capital.</p>
-    </div>
+        <div class="adv-box reveal">
+            <h3>Money Management</h3>
+            <p>Protección de capital mediante gestión profesional del riesgo.</p>
+        </div>
 
-    <div class="adv-box reveal">
-        <h3>2-4 Picks Diarios</h3>
-        <p>Selecciones cuidadosamente filtradas, no apuestas masivas.</p>
-    </div>
+        <div class="adv-box reveal">
+            <h3>2-4 Picks Diarios</h3>
+            <p>Selección filtrada, sin apuestas impulsivas.</p>
+        </div>
 
-    <div class="adv-box reveal">
-        <h3>Análisis Real</h3>
-        <p>No seguimos tendencias, analizamos datos, contexto y valor real.</p>
-    </div>
+        <div class="adv-box reveal">
+            <h3>Análisis Real</h3>
+            <p>Estudio profundo de datos, forma, contexto y valor.</p>
+        </div>
 
-    <div class="adv-box reveal">
-        <h3>Transparencia Total</h3>
-        <p>Historial claro y resultados documentados.</p>
-    </div>
+        <div class="adv-box reveal">
+            <h3>Transparencia</h3>
+            <p>Resultados documentados y seguimiento claro.</p>
+        </div>
 
-    <div class="adv-box reveal">
-        <h3>Marco Legal</h3>
-        <p>Servicio informativo bajo términos y condiciones claros.
-        No promovemos juego irresponsable.</p>
-    </div>
+        <div class="adv-box reveal">
+            <h3>Marco Legal</h3>
+            <p>Servicio informativo bajo términos y condiciones.
+            No promovemos juego irresponsable.</p>
+        </div>
 
-</section>
+    </section>
+
+</main>
 
 
 <script>
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
 
-    for (let i = 0; i < reveals.length; i++) {
+    reveals.forEach(el => {
         const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        const elementVisible = 100;
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("active");
         }
-    }
+    });
 }
 
 window.addEventListener("scroll", reveal);
