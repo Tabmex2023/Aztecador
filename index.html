@@ -1,108 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Astecador | Análisis Deportivo Premium</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Astecador ofrece análisis deportivo profesional basado en datos, disciplina y estrategia estructurada.">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astecador | Análisis Deportivo Profesional</title>
+
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<div class="logo-banner">
-    <img src="assets/logo.png" alt="Astecador Logo">
-</div>
+<!-- HEADER -->
+<header class="header">
+    <div class="nav-container">
 
-<div class="navbar">
-    <div class="nav-left">
-        <a href="#servicio">Servicio</a>
-        <a href="#metodologia">Metodología</a>
-        <a href="#membresia">Membresía</a>
+        <div class="logo-area">
+            <img src="assets/logo.png" alt="Astecador Logo">
+        </div>
+
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Análisis</a>
+            <a href="#">Resultados</a>
+            <a href="#">Membresías</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="auth-buttons">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="register">Registro</a>
+        </div>
+
     </div>
-    <a href="login.html" class="login-btn">Iniciar Sesión</a>
-</div>
+</header>
 
-<main>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Análisis Deportivo Basado en Datos</h1>
+        <p>Disciplina, estrategia y gestión estructurada.</p>
+        <a href="#" class="btn-primary">Acceso Premium</a>
+    </div>
+</section>
 
-    <section class="hero reveal">
-        <h1>ASTECADOR</h1>
-        <p>
-            Servicio profesional de análisis deportivo basado en datos reales,
-            gestión estructurada del riesgo y disciplina estratégica.
-        </p>
-        <a href="login.html" class="primary-btn">Acceder a la Membresía</a>
-    </section>
+<!-- FILTRO -->
+<section class="filter-section reveal">
+    <h2>Filtrar Análisis</h2>
 
-    <section id="servicio" class="section reveal">
-        <h2>Nuestro Servicio</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Pronósticos Diarios</h3>
-                <p>Selección estratégica con evaluación estadística avanzada.</p>
-            </div>
-            <div class="card">
-                <h3>Análisis Profesional</h3>
-                <p>Evaluación basada en métricas reales y tendencias históricas.</p>
-            </div>
-            <div class="card">
-                <h3>Gestión de Riesgo</h3>
-                <p>Administración disciplinada del capital con enfoque a largo plazo.</p>
-            </div>
-        </div>
-    </section>
+    <div class="filter-grid">
+        <select>
+            <option>Liga</option>
+            <option>La Liga</option>
+            <option>Premier League</option>
+            <option>Bundesliga</option>
+        </select>
 
-    <section id="metodologia" class="section reveal">
-        <h2>Metodología</h2>
-        <p style="color:#bfbfbf; max-width:800px;">
-            Nuestro enfoque se basa en análisis estadístico, control estructurado del riesgo
-            y consistencia operativa. No ofrecemos promesas de ganancias garantizadas.
-        </p>
-    </section>
+        <select>
+            <option>Mercado</option>
+            <option>Over/Under</option>
+            <option>BTTS</option>
+            <option>Handicap</option>
+        </select>
 
-    <section id="membresia" class="section reveal">
-        <div class="membership">
-            <h2>Membresía Premium</h2>
-            <div class="price">$990 MXN / mes</div>
-            <p style="color:#bfbfbf;">
-                Acceso completo al panel privado con pronósticos diarios y seguimiento histórico.
-            </p>
-            <br>
-            <a href="login.html" class="primary-btn">Crear Cuenta</a>
-        </div>
-    </section>
+        <select>
+            <option>Riesgo</option>
+            <option>Bajo</option>
+            <option>Medio</option>
+            <option>Alto</option>
+        </select>
 
-</main>
+        <button class="btn-secondary">Aplicar</button>
+    </div>
+</section>
 
-<footer>
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature-box reveal">
+        <h3>Modelos Estadísticos</h3>
+        <p>Análisis profundo con datos históricos y métricas avanzadas.</p>
+    </div>
+
+    <div class="feature-box reveal">
+        <h3>Gestión de Riesgo</h3>
+        <p>Enfoque disciplinado orientado al largo plazo.</p>
+    </div>
+
+    <div class="feature-box reveal">
+        <h3>Transparencia</h3>
+        <p>Resultados documentados y seguimiento estructurado.</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
     <div class="footer-links">
-        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
-        <a href="terminos-condiciones.html">Términos y Condiciones</a>
-        <a href="politica-cancelacion.html">Política de Cancelación</a>
-        <a href="aviso-legal.html">Aviso Legal</a>
+        <a href="#">Aviso Legal</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Responsabilidad</a>
     </div>
 
-    <div class="footer-legal">
-        Astecador ofrece exclusivamente servicios de análisis deportivo.
-        No operamos como casa de apuestas ni aceptamos apuestas.
-        No garantizamos resultados financieros.
-        Las apuestas deportivas implican riesgo y deben realizarse de manera responsable.
-        <br><br>
-        © 2026 Astecador. Todos los derechos reservados.
-    </div>
+    <p class="disclaimer">
+        Este servicio ofrece análisis deportivo informativo. No se garantizan resultados.
+    </p>
+
+    <p>© 2026 Astecador</p>
 </footer>
 
 <script>
-function reveal() {
-    const reveals = document.querySelectorAll(".reveal");
-    for (let i = 0; i < reveals.length; i++) {
+/* Scroll Reveal */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
         const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-            reveals[i].classList.add("active");
+        const elementTop = el.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+            el.classList.add("active");
         }
-    }
-}
-window.addEventListener("scroll", reveal);
+    });
+});
 </script>
 
 </body>
