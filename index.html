@@ -1,97 +1,247 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aztecador | Pronósticos Premium</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nombre de tu Servicio</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background: url('TU-FONDO.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.75);
+    min-height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+nav img {
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00c3ff;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+.btn-primary {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 14px 35px;
+    background: #00c3ff;
+    color: black;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #0099cc;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.feature-box {
+    width: 300px;
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+}
+
+/* PRICING */
+.pricing-box {
+    max-width: 400px;
+    margin: auto;
+    background: rgba(255,255,255,0.08);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0,0,0,0.9);
+    padding: 40px 10%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #00c3ff;
+}
+
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        display: none;
+    }
+}
+</style>
 </head>
 
 <body>
-
-<!-- LOGO BANNER -->
-<div class="logo-banner">
-    <img src="assets/logo.png" alt="Aztecador Logo">
-</div>
+<div class="overlay">
 
 <!-- NAVIGATION -->
-<nav class="navbar">
-    <div class="nav-left">
-        <a href="#">Inicio</a>
-        <a href="#">FAQ</a>
-        <a href="#">Resultados</a>
-        <a href="#">Contacto</a>
-    </div>
-    <div class="nav-right">
-        <a href="#" class="login-btn">Login</a>
-    </div>
+<nav>
+    <img src="TU-LOGO.png" alt="Logo">
+    <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#checkout">Comenzar</a></li>
+    </ul>
 </nav>
 
-<!-- CONTENT -->
-<main>
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <h1>Solución Profesional Digital</h1>
+    <p>Servicio moderno, seguro y eficiente para tu negocio.</p>
+    <a href="#precios" class="btn-primary">Empezar Ahora</a>
+</section>
 
-    <!-- Beschreibung Baukasten -->
-    <section class="box reveal">
-        <h1>Pronósticos Deportivos Premium</h1>
-        <p>
-            Sistema basado en análisis estadístico avanzado, lectura del mercado
-            y evaluación de valor real en cada evento deportivo.
-        </p>
-    </section>
+<!-- SERVICIOS -->
+<section id="servicios" class="section">
+    <h2>¿Qué Ofrecemos?</h2>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Rápido</h3>
+            <p>Activación inmediata y acceso automático.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Seguro</h3>
+            <p>Pagos protegidos y sistema confiable.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Profesional</h3>
+            <p>Diseñado para clientes exigentes.</p>
+        </div>
+    </div>
+</section>
 
-    <section class="box reveal">
-        <h2>85% de Precisión Histórica</h2>
-        <p>
-            Nuestro modelo combina datos, contexto y gestión estratégica.
-            No realizamos apuestas masivas, seleccionamos oportunidades reales.
-        </p>
-    </section>
+<!-- PRECIOS -->
+<section id="precios" class="section">
+    <h2>Plan Mensual</h2>
+    <div class="pricing-box">
+        <h3>Plan Premium</h3>
+        <div class="price">$500 MXN</div>
+        <p>Acceso completo al servicio.</p>
+        <a href="#checkout" class="btn-primary">Suscribirme</a>
+    </div>
+</section>
 
-    <section class="box reveal">
-        <h2>Gestión Profesional del Capital</h2>
-        <p>
-            Aplicamos un sistema de money management diseñado para proteger
-            el bankroll y maximizar rendimiento a largo plazo.
-        </p>
-    </section>
+<!-- CHECKOUT CTA -->
+<section id="checkout" class="section">
+    <h2>Empieza Hoy</h2>
+    <p>Suscripción mensual cancelable en cualquier momento.</p>
+    <a href="LINK-MERCADOPAGO" class="btn-primary">
+        Pagar con Mercado Pago
+    </a>
+</section>
 
-    <section class="box reveal">
-        <h2>Membresía</h2>
-        <p>
-            Acceso completo por $500 MXN mensuales.
-            Incluye 2-4 pronósticos diarios y seguimiento constante.
-        </p>
-    </section>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Nombre Comercial | RFC: XXXXXXXX</p>
 
-    <section class="box reveal">
-        <h2>Marco Legal</h2>
-        <p>
-            Aztecador opera como servicio informativo y de análisis deportivo.
-            No promovemos el juego irresponsable.
-            Todos los miembros aceptan términos y condiciones antes del acceso.
-        </p>
-    </section>
+    <div class="footer-links">
+        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+        <a href="terminos.html">Términos y Condiciones</a>
+        <a href="cancelacion.html">Política de Cancelación</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
 
-</main>
+    <p style="margin-top:20px; opacity:0.6;">
+        Todos los derechos reservados.
+    </p>
+</footer>
 
-
-<script>
-function reveal() {
-    const reveals = document.querySelectorAll(".reveal");
-
-    reveals.forEach(el => {
-        const windowHeight = window.innerHeight;
-        const elementTop = el.getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - 100) {
-            el.classList.add("active");
-        }
-    });
-}
-
-window.addEventListener("scroll", reveal);
-reveal();
-</script>
-
+</div>
 </body>
 </html>
