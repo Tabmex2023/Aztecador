@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astecador | Análisis Deportivo Premium</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header class="header">
+  <div class="nav-wrapper">
+    <!-- Logo klein links -->
+    <div class="left-side">
+      <img src="assets/logo.png" alt="Astecador Logo" class="logo">
+    </div>
+
+    <!-- Menü rechts neben Logo -->
+    <nav class="right-side">
+      <a href="#" class="nav-link">Analysis</a>
+      <a href="#" class="nav-link">Membresía</a>
+      <a href="#" class="nav-link login-btn">Login</a>
+      <a href="#" class="nav-link register-btn">Registro</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <section class="hero">
+    <div class="hero-content active">
+      <h1>Membresía Premium</h1>
+      <p>Accede a análisis deportivos impulsados por Inteligencia Artificial con 85% de precisión histórica.</p>
+      <p>La mayoría de nuestros miembros recuperan el costo mensual en la primera semana.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>IA Avanzada</h3>
+      <p>Modelos estadísticos y machine learning analizan miles de variables antes de cada pronóstico.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>85% Precisión</h3>
+      <p>Historial documentado con alto porcentaje de aciertos en mercados Over/Under.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Resultados Rápidos</h3>
+      <p>La mayoría de usuarios recupera la membresía en menos de 7 días.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Acceso 24/7</h3>
+      <p>Disponible desde móvil, tablet o computadora.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Activación Automática</h3>
+      <p>Pago con MercadoPago y acceso inmediato durante 30 días.</p>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-content active">
+      <h1>$500 MXN / Mes</h1>
+      <p>Acceso completo a todos los análisis premium.</p>
+      <a href="#" class="register-btn nav-link" style="display:inline-block;margin-top:20px;">
+        Activar Membresía
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="aviso.html">Aviso Legal</a>
+    <a href="privacidad.html">Política de Privacidad</a>
+    <a href="terminos.html">Términos y Condiciones</a>
+    <a href="responsabilidad.html">Responsabilidad</a>
+  </div>
+  <p>&copy; 2026 Astecador. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.feature-box, .hero-content');
+  function reveal() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        reveals[i].classList.add('active');
+      }
+    }
+  }
+  window.addEventListener('scroll', reveal);
+  window.addEventListener('load', reveal);
+</script>
+
+</body>
+</html>
