@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astecador | Análisis Deportivo Premium</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<header class="header">
+  <div class="nav-wrapper">
+    <!-- Logo klein links -->
+    <div class="left-side">
+      <img src="assets/logo.png" alt="Astecador Logo" class="logo">
+    </div>
+
+    <!-- Menü rechts neben Logo -->
+    <nav class="right-side">
+      <a href="analysis.html" class="nav-link">Analysis</a>
+      <a href="membership.html" class="nav-link">Membresía</a>
+      <a href="#" class="nav-link login-btn">Login</a>
+      <a href="#" class="nav-link register-btn">Registro</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+  <section class="hero">
+    <div class="hero-content active">
+      <h1>Análisis Premium</h1>
+      <p>Acceso exclusivo para miembros activos.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Partido: Barcelona vs Real Madrid</h3>
+      <p>Mercado: Over 2.5 goles</p>
+      <p>Probabilidad IA: 87%</p>
+      <p>Stake recomendado: 3/5</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Partido: Liverpool vs Chelsea</h3>
+      <p>Mercado: Over 1.5 goles</p>
+      <p>Probabilidad IA: 82%</p>
+      <p>Stake recomendado: 2/5</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-links">
+    <a href="aviso.html">Aviso Legal</a>
+    <a href="privacidad.html">Política de Privacidad</a>
+    <a href="terminos.html">Términos y Condiciones</a>
+    <a href="responsabilidad.html">Responsabilidad</a>
+  </div>
+  <p>&copy; 2026 Astecador. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.feature-box, .hero-content');
+  function reveal() {
+    for (let i = 0; i < reveals.length; i++) {
+      const windowHeight = window.innerHeight;
+      const elementTop = reveals[i].getBoundingClientRect().top;
+      if (elementTop < windowHeight - 100) {
+        reveals[i].classList.add('active');
+      }
+    }
+  }
+  window.addEventListener('scroll', reveal);
+  window.addEventListener('load', reveal);
+</script>
+
+</body>
+</html>
